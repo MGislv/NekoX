@@ -737,9 +737,6 @@ public class NekoGeneralSettingsActivity extends BaseFragment {
     }
 
     private void setCanNotChange() {
-        if (!NekoXConfig.isDeveloper())
-            cellGroup.rows.remove(hideSponsoredMessageRow);
-
         boolean enabled;
 
         enabled = NekoConfig.largeAvatarInDrawer.Int() > 0;
