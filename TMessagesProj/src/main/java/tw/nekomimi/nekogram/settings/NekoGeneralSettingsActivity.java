@@ -767,9 +767,6 @@ public class NekoGeneralSettingsActivity extends BaseFragment {
     }
 
     private void setCanNotChange() {
-        if (!NekoXConfig.isDeveloper())
-            cellGroup.rows.remove(hideSponsoredMessageRow);
-
         if (!BuildVars.isGServicesCompiled) {
             NekoConfig.useOSMDroidMap.setConfigBool(true);
             ((ConfigCellTextCheck) useOSMDroidMapRow).setEnabled(false);
