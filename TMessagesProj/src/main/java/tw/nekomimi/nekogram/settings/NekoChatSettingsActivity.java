@@ -180,17 +180,6 @@ public class NekoChatSettingsActivity extends BaseFragment implements Notificati
             }
         });
 
-        // Before listAdapter
-        if (!NekoXConfig.isDeveloper()) {
-            cellGroup.rows.remove(disableChatActionRow);
-            cellGroup.rows.remove(disableChoosingStickerRow);
-            cellGroup.rows.remove(ignoreBlockedRow);
-            cellGroup.rows.remove(dividerEnd);
-            NekoConfig.disableChatAction.setConfigBool(false);
-            NekoConfig.disableChoosingSticker.setConfigBool(false);
-            NekoConfig.ignoreBlocked.setConfigBool(false);
-        }
-
         listAdapter = new ListAdapter(context);
 
         fragmentView = new FrameLayout(context);
